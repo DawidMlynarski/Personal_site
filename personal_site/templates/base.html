@@ -10,7 +10,6 @@
 	<meta name="viewport" content= 
 		"width=device-width, initial-scale=1.0"> 
 	<title>Django + Tailwind CSS</title> 
-
 	{% compress css %} 
 	<link rel="stylesheet"
 		href="{% static 'src/output.css' %}"> 
@@ -18,11 +17,13 @@
 
 </head> 
 
-<body class="bg-green-950"> 
+<body class = "bg-green-950"> 
 	<div class="container mx-auto mt-4"> 
 		{% block content %} 
 		{% endblock content %} 
 	</div> 
+	<script src="{% static 'particles.js' %}"></script>
+	<script src="{% static 'app.js' %}"></script>
 </body> 
 
 </html>
