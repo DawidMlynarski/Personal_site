@@ -15,12 +15,18 @@
 		href="{% static 'src/output.css' %}"> 
 	{% endcompress %} 
 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head> 
 
 <body class="bg-black"> 
+
+	<div id="container" class="m-0">
+		
 		{% block content %} 
 		{% endblock content %} 
 
+	</div>
 		<script src="{% static 'particles.js' %}"></script>
 		<script src="{% static 'app.js' %}"></script> 
 </body> 
