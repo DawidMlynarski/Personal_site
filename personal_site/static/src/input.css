@@ -3,8 +3,9 @@
 @import "tailwindcss/utilities";
 
 body{
-    background-image: url("img/constellation.jpg");
-    background-size: cover;
+    background-image: url("img/constellation1.jpg");
+    background-size:100%;
+    background-repeat: repeat-y;
 }
 h1{
     position:absolute;
