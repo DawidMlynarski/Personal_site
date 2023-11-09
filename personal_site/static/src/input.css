@@ -8,10 +8,7 @@ body{
     background-repeat: repeat-y;
 }
 h1{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+
 }
 #particles-js{
     cursor:default;
@@ -25,5 +22,36 @@ h1{
     position:absolute;
     top:90%;
     left:50%;
-    margin-left:-16px;    
+    margin-left:-16px;
+   
+}
+
+#title
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: appear 10s;
+}
+
+@keyframes appear {
+    from {
+        opacity:0;  
+    }
+    to {
+        opacity:100;
+    }
+  }
+
+@keyframes appear_indicator {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity:100;
+    }
 }

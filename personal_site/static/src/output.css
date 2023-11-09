@@ -648,6 +648,28 @@ video {
   width: 1.5rem;
 }
 
+@keyframes appear_indicator {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -660,8 +682,8 @@ video {
   }
 }
 
-.animate-bounce {
-  animation: bounce 1s infinite;
+.animate-appear_indicator {
+  animation: appear_indicator 5s, bounce 1s infinite;
 }
 
 .grid-cols-3 {
@@ -721,11 +743,6 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .border-violet-500 {
   --tw-border-opacity: 1;
   border-color: rgb(139 92 246 / var(--tw-border-opacity));
@@ -754,9 +771,9 @@ video {
   line-height: 1;
 }
 
-.text-slate-500 {
+.text-slate-300 {
   --tw-text-opacity: 1;
-  color: rgb(100 116 139 / var(--tw-text-opacity));
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .text-violet-500 {
@@ -764,24 +781,9 @@ video {
   color: rgb(139 92 246 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-violet-600 {
   --tw-text-opacity: 1;
   color: rgb(124 58 237 / var(--tw-text-opacity));
-}
-
-.text-slate-200 {
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
-}
-
-.text-slate-300 {
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -817,10 +819,6 @@ body{
 }
 
 h1{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
 }
 
 #particles-js{
@@ -839,9 +837,37 @@ h1{
   margin-left:-16px;
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+#title
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  animation: appear 10s;
+}
+
+@keyframes appear {
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:100;
+  }
+}
+
+@keyframes appear_indicator {
+  0% {
+    opacity:0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity:100;
+  }
 }
 
 .hover\:text-violet-500:hover {
@@ -879,11 +905,6 @@ h1{
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:bg-slate-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-  }
-
   .dark\:bg-slate-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(15 23 42 / var(--tw-bg-opacity));
